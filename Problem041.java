@@ -1,6 +1,8 @@
+// What is the largest n-digit pandigital prime?
+// an n-digit pandigital number is one that contains each of the digits from 1-n
 
 public class Problem041 {
-    
+    // sufficient test for pandigitality: # of digits, distinctness of digits, and digit sum
     public static boolean isPandigital(int a) {
         int numDigits = (int)(Math.log10(a)+1);
         
@@ -40,6 +42,7 @@ public class Problem041 {
     public static void main(String[] args) {
         
         int max = 0;
+        // brute force calculation, but use heuristic to narrow range
         // narrow range -- 1-9 and 1-8 pandigital sums can't be prime
         // because they're always divisible by 3.  Therefore, we only have to
         // find the largest 7-digit pandigital prime.
