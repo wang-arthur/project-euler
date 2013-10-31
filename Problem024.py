@@ -20,7 +20,7 @@ def nthpermutation(digits, n):
 	if len(digits) == 1:
 		return str(digits[0])
 	# first we determine the first digit of the desired permutation
-	# there are d, (d-1)! buckets
+	# there are d leading-digit buckets containing (d-1)! tails
 	index = (n-1) / factorial(len(digits) - 1)
 	leadingdigit = digits[index]
 	# now we're trying to find the n%(d-1)th permutation of the remaining digits
