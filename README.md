@@ -1,10 +1,9 @@
-project-euler
-=============
+# project-euler
 
 project euler solutions (mostly december 2012)
 
-favorite problems
-=================
+
+## favorite problems
 
 9, 15 (no computation, just arithmetic)
 24 (combinatorial recursion)
@@ -12,7 +11,6 @@ favorite problems
 107 (Prim's algorithm)
 
 
-updates
-=======
+## updates
 10/30 solved 43, 45, and 47
 
