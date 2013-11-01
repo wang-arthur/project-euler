@@ -13,4 +13,4 @@ project euler solutions (mostly december 2012)
 
 ## updates
 10/30 solved 43, 45, and 47
-
+10/31 solved 62, 73
