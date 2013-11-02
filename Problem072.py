@@ -31,7 +31,7 @@ def divisors(d):
 	return div
 
 
-# from euler theorem, phi(d) = d * product(1 - 1/p) over primes p dividing d
+# from euler's theorem, phi(d) = d * product(1 - 1/p) over primes p dividing d
 def phi(d):
 	product = d
 	for p in divisors(d):
