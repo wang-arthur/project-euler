@@ -14,4 +14,5 @@ project euler solutions (mostly december 2012)
 ## updates
 10/30 solved 43, 45, and 47  
 10/31 solved 62, 71, 72, and 73  
-11/1 solved 87 and 92
+11/1 solved 87 and 92  
+11/5 solved 85 and 147
