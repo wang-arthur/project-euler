@@ -1,24 +1,31 @@
 '''
 Non-bouncy numbers
 
-non-bouncy numbers are increasing or decreasing numbers
+An increasing number is a positive integer such that each digit is >= the digit to the left
+a decreasing number is a positive integer with each digit <= the digit to its left.
+
+A bouncy number is one that's neither increasing nor decreasing.
 
 How many numbers below a googol (10^100) are not bouncy?
-try a dynamic programming approach.
 
-(we can't simply reverse increasing numbers to find decreasing numbers -- leading zeros)
+Dynamic programming approach.
 
-procedure for calculating the # of increasing positive integers below 10^j
+Procedure for calculating the # of increasing positive integers below 10^j
 
-A[i][j] represents the number of increasing numbers ending in i
-A[i][0] = []
-A[i][1] = [1 for i in range(10)]
-A[0][1] = 0
+A[j][i] represents the number of increasing numbers ending in i under 10^j
+
+base case:
+A[0][i] = []
+A[1][i] = [1 for i in range(10)]
+A[1][0] = 0
+
+to calculate the number of increasing numbers under 10^(j+1) and over 10^j,
+for each j-digit increasing number with final digit i, we could append any digit x,
+i <= x <= 9 to produce a unique incrasing number with (j+1) digits.
 
 for i in range(10):
 	for k in range(i, 10):
-		A[i][j+1] += A[i][j]
-A[i][j] 
+		A[j+1][i] += A[j][i]
 
 '''
 
@@ -62,6 +69,7 @@ def decreasing(j):
 	return total
 
 # calculate number of integers that are both increasing and decreasing below 10^j (to eliminate the double count)
+# 1..9, 11, 22, 33, etc.
 def both(j):
 	return 9*j
 
